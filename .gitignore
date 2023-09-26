@@ -1,7 +1,7 @@
 # build products
 build/
 target/
-dist/
+# dist/
 
 # IDE
 .vscode/
