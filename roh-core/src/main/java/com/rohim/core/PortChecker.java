@@ -4,7 +4,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 
 /**
- * Check if a remote port is open.
+ * Check if a remote port is open
  */
 public class PortChecker {
   public enum PortStatus {
