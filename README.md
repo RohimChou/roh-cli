@@ -9,13 +9,21 @@ java command line tool for making my life a a bit easier. 1. can try port, 2. ca
 # examples
 
 ```bash
-# first arg: `ping` use check port open util
+### ping, telnet ###
+# first arg: `ping` to use check port open util
 # second arg: domain name or ip
 # third arg: port number
-roh.bat ping rohim.cc 80
+roh ping rohim.cc 80
 
-# first arg: `spf`, `splitfile` use splitfile util
+### split large file by lines ###
+# first arg: `spf`, `splitfile` to use splitfile util
 # second arg: file path
 # third arg: lines per file
-roh.bat spf "D:\abc.sql" 50000
+roh spf "D:\abc.sql" 50000
+
+### print fixed length random string on console ###
+# first arg: `ranstr`, `randomstr` to use random string util
+# second arg: length of random string
+# third arg: number of random strings
+roh ranstr 15 5
 ```

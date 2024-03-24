@@ -2,6 +2,7 @@ package com.rohim.cli;
 
 import com.rohim.core.FileSplitter;
 import com.rohim.core.PortChecker;
+import com.rohim.core.RandomStringGenerator;
 
 public class Main {
   public static void main(String[] args) {
@@ -21,6 +22,18 @@ public class Main {
 
         // call util
         FileSplitter.splitFile(filePath, linesPerChunk);
+        break;
+      case "randomstr":
+      case "ranstr":
+        // get param from args
+        int length = Integer.parseInt(args[1]);
+        int count = args.length >= 3 ? Integer.parseInt(args[2]) : 1;
+
+        // call util
+        for (int i = 0; i < count; i++) {
+          String randomString = RandomStringGenerator.generate(length);
+          System.out.println(randomString);
+        }
         break;
       default:
         System.out.println("Unknown command: " + command);
