@@ -1,7 +1,6 @@
 # build products
 build/
 target/
-dist/
 bin/
 
 # IDE
