@@ -2,6 +2,7 @@ package com.rohim.cli;
 
 import com.rohim.core.FileSplitter;
 import com.rohim.core.PortChecker;
+import com.rohim.core.PortListener;
 import com.rohim.core.RandomStringGenerator;
 
 public class Main {
@@ -34,6 +35,10 @@ public class Main {
           String randomString = RandomStringGenerator.generate(length);
           System.out.println(randomString);
         }
+        break;
+      case "listen":
+        int port = Integer.parseInt(args[1]);
+        PortListener.Listen(port);
         break;
       default:
         System.out.println("Unknown command: " + command);

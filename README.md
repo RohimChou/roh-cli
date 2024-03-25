@@ -26,4 +26,9 @@ roh spf "D:\abc.sql" 50000
 # second arg: length of random string
 # third arg: number of random strings
 roh ranstr 15 5
+
+### listen to port ###
+# first arg: `listen` to use listen port util
+# second arg: port number
+roh listen 80
 ```
