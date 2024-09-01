@@ -2,9 +2,14 @@
 java command line tool for making my life a bit easier. 1. can try port, 2. can create project skeleton, 3. can create markdown syntax for folder structure (come with web interface)
 
 # project structure
-
 - dist/: for compiled .jar
 - roh-cli: command line interface wrapping around roh-core
+
+# how to use
+1. clone this project
+2. copy dist/windows or dist/ubuntu to your machine
+3. make sure you have java 17 or higher installed
+4. run `roh ping google.com` to see if it works
 
 # examples
 

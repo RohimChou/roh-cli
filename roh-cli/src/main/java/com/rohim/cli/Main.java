@@ -1,9 +1,6 @@
 package com.rohim.cli;
 
-import com.rohim.core.FileSplitter;
-import com.rohim.core.PortChecker;
-import com.rohim.core.PortListener;
-import com.rohim.core.RandomStringGenerator;
+import com.rohim.core.*;
 
 public class Main {
   public static void main(String[] args) {
@@ -11,9 +8,15 @@ public class Main {
 
     switch (command) {
       case "ping":
-        PortChecker.PortStatus portStatus = PortChecker.checkPort(
-                args[1], Integer.parseInt(args[2]), args.length == 4 ? Integer.parseInt(args[3]) : null);
-        System.out.println(portStatus);
+        String host = args[1];
+        if (args.length == 2) {
+           PingUtils.ping(host);
+        } else {
+          int port = Integer.parseInt(args[2]);
+          Integer timeoutSecs = args.length >= 4 ? Integer.parseInt(args[3]) : null;
+          PortChecker.PortStatus portStatus = PortChecker.checkPort(host, port, timeoutSecs);
+          System.out.println(portStatus);
+        }
         break;
       case "spf":
       case "splitfile":
